@@ -48,13 +48,11 @@ class TodolistController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(todolist $todolist)
-    {
-        $todolist->edit();
-        return back();
-    }
-
-    /**
+    // public function edit(todolist $todolist)
+    // {
+    //     $todolist->edit();
+    //     return back();    
+        /**
      * Update the specified resource in storage.
      */
    // public function update(Request $request, todolist $todolist)
