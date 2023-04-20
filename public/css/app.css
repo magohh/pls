@@ -2,6 +2,10 @@
 .bg-1{
     background-image: url('../img/bg-1.jpg');
     background-size: cover;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .bg-2{background-color: #EBECF1;}
 .bg-3{background:linear-gradient(316deg, royalblue, black);}
@@ -164,5 +168,10 @@ a.btn:hover{
     background-color: #4169E1;
     color:#fff; 
     cursor:pointer;
+}
+img.m-2-a:hover{
+    transition: ease-in .5s;
+    transition-duration: 1s;
+    transform: rotate(360deg);
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');

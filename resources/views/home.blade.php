@@ -2,11 +2,12 @@
 
 @section('content')
 <div class="bg-1">
-		<div class="col p-250-15">
-			<h1 class="text-white fz-3 mb-1-5">Servicio de consultoría <br> PCDI-DSS</h1>
-			<a class="contact-btn">Contacta a un asesor</a>
-		</div>
+	<div class="col p-250-15">
+		<h1 class="text-white fz-3 mb-1-5">Servicio de consultoría <br> PCDI-DSS</h1>
+		<a class="contact-btn">Contacta a un asesor</a>
 	</div>
+</div>
+<!--QUE ES-->
 <div class="container text-center">
 	<div class="row">
 		<div class="col">
@@ -17,11 +18,12 @@
 		</div>
 	</div>
 </div>
-<div class="bg-3">
+<div class="bg-3 scrollanimation scrollanimation animated slideInRight adr-7 adl-1">
 	<div class="container">
 		<p class="banner-text-1">Nuestros Servicio brinda asesoramiento integral experto a las Organizaciones</p>
 	</div>
 </div>
+<!--SERVICIOS-->
 <div class="container">
 	<div class="row">
 		<div class="col">
@@ -71,7 +73,7 @@
 		</div>
 	</div>
 </div>
-<div class="bg-2">
+<div class="bg-2 scrollanimation animated slideInLeft adr-7 adl-1">
 	<div class="container">
 		<p class="banner-text-2">Nuestro compromiso es estar a su lado en todo el proceso que le conducirá hacia la <span class="color-1">certificación</span> de la industria de medios de pago y su mantenimiento.</p>
 	</div>
@@ -86,6 +88,7 @@
 </p>
 		</div>
 	</div>
+<!--BENEFICIOS-->
 	<div class="row">
 		<div class="col">
 			<p class="title" id="beneficios">Beneficios</p>
@@ -192,5 +195,6 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 	@endsection
 
