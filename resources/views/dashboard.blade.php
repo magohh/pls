@@ -170,6 +170,45 @@
 			<p class="benefit-text">Disminución de los riesgos de incumplimiento como las pérdidas financieras.</p>
 		</div>
 	</div>
+	@if (count([$todolists]))
+	
+	<ul class="list-group list-group-flush mt-3 row">
+		@foreach($todolists as $todolist)
+		<li class="list-group-item d-flex align-center">
+		<div class="col-1">
+			<input type="radio">
+		</div>
+		<div class="col">
+			<form action="{{route('destroy',$todolist->id)}}" method="POST" class="new-benefit row mb-4">
+				<div class="col-10">
+				{{$todolist->content}}
+				</div>
+				
+				@csrf
+				@method('delete')
+				<button type="submit" class="col-1"><img src="img/trash.png" class="h-30px" alt=""></button>
+				<a href="{{url('edit'. $todolist->id)}}" class="col-1"><img src="img/edit.png" class="h-30px" alt=""></a>
+			</form>
+		</div>
+		</li>
+		@endforeach
+	</ul>
+	@endif
+</div>
+<div class="container">
+	<form action="{{route('store')}}" method="POST" acutocomplete="off">
+		@csrf
+		<div class="input-group">
+			<div class="col-1">
+				<input type="radio">
+			</div>
+			<div class="col row">
+				<input name="content" class="input-benefit" placeholder="Agrega un beneficio que te interese añadir">
+				<button type="submit" class="mt-4 w-25 btn btn-primary text-primary m-auto">Añadir</button>
+			</div>
+		</div>
+	</form>	
+</div>
 </x-app-layout>
 <footer class="d-flex">
 	<img src="img/logoiqsec.webp" alt="" class="m-auto">
