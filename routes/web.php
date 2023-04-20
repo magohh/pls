@@ -1,12 +1,15 @@
 <?php
 use App\Http\Controllers\TodolistController;
 use App\Http\Controllers\PageController;
+
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 
 
 Route::get('/',[PageController::class,'home'])->name('home');
+Route::resource('logged',PageController::class)->except(['show']);
+Route::get('/',[PageController::class,'logged'])->name('logged');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -21,5 +24,6 @@ Route::middleware('auth')->group(function () {
 Route::get('/',[TodolistController::class,'index'])->name('index');
 Route::post('/',[TodolistController::class,'store'])->name('store');
 Route::delete('/{todolist:id}',[TodolistController::class,'destroy'])->name('destroy');
+Route::get('edit{id}',[TodolistController::class,'edit'])->name('edit');
 
 require __DIR__.'/auth.php';

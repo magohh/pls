@@ -1,3 +1,12 @@
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PCI-DSS</title>
+	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+	@vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
 <nav x-data="{ open: false }" class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -11,9 +20,23 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex align-center">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        <!-- {{ __('Dashboard') }} -->
+                        <a href="">Servicios</a>
+                        <a href="">Blog</a>
+                        <a href="">Acerca de nosotros</a>
+                        <a href="">Únete al equipo</a>
+                        <a href="">Contáctanos</a>
+                        <div class="dropdown">
+                            <a class="dropdown" data-toggle="dropdown">PCI-DSS</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <ul class="poppins poppins">
+                                    <li class="m-3"><a href="#servicios">Servicios</a></li>
+                                    <li class="m-3"><a href="#beneficios">Beneficios</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </x-nav-link>
                 </div>
             </div>
@@ -22,7 +45,7 @@
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
-                        <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
+                        <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white text-dark hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
                             <div>{{ Auth::user()->name }}</div>
 
                             <div class="ml-1">
